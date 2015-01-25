@@ -1,1 +1,7 @@
-You log goes in this  file.
+Start: Sat, 24 Jan 2015 21:00:54 -0500 
+End: Sat, 24 Jan 2015 21:25:54 -0500 
+Tasks: Worked on variables.js
+
+Start: Sat, 24 Jan 2015 20:59:29 -0500 
+End: Sat, 24 Jan 2015 21:59:29 -0500 
+Tasks: Removed unecessary files
