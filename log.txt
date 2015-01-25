@@ -1,3 +1,7 @@
+Start: Sat, 24 Jan 2015 22:05:32 -0500
+End: Sat, 24 Jan 2015 22:29:43 -0500 
+Tasks: Updated log/Added useless function/bar
+
 Start: Sat, 24 Jan 2015 21:33:32 -0500
 End: Sat, 24 Jan 2015 21:47:32 -0500 
 Tasks: Added to log/finished variables.js

@@ -9,9 +9,12 @@
 */
 
 function returnObjectLiteral() {
-  //your code here
-  return undefined; //Modify ONLY this line
-  //end your code
+  var food = new Object;
+  food.type = 'Goldfish';
+  food.brand = 'Pepperidge Farm';
+  food.flavor = 'Cheddar';
+  food.count = 2000;
+  return food;
 }
 
 /**
@@ -38,7 +41,32 @@ function returnObjectLiteral() {
 */
 
 //your code here
+function MessageLog (user) {
+  this.name = user;
+}
 
+function logMessage (messageText, direction) {
+  MessageLog.call(this);
+  if (direction == 0) {
+    return 0;
+  }
+  else if (direction == 1) {
+    return 1; 
+  }
+  return 3;
+}
+
+function getSentMessage(n) {
+  MessageLog.call(this);
+}
+
+function totalSent() {
+  MessageLog.call(this);
+}
+
+function totalReceived() {
+  MessageLog.call(this);
+}
 //end your code
 
 /**
@@ -47,7 +75,10 @@ function returnObjectLiteral() {
 * received.
 */
 //your code here
-
+function lastReceivedMessage () {
+  return null;
+}
+lastReceivedMessage.prototype = new MessageLog;
 //end your code
 
 /**
@@ -57,5 +88,5 @@ function returnObjectLiteral() {
 */
 
 //your code here
-
+//var myLog = new MessageLog('BlackHatGuy', ['foo', 'bar', 'baz']);
 //end your code
