@@ -10,11 +10,13 @@ in input `a`
 a: the original a number
 */
 function variableModification(a) {
-  var plus5;
+  var plus5 = 6;
   var asString;
   var yourNumberIs;
   //your code here
-
+  plus5 = a + 5;
+  asString = "a";
+  yourNumberIs = "Your Number is a";
   //end your code
   return [plus5, asString, yourNumberIs, a];
 }
