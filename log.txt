@@ -1,3 +1,7 @@
+Start: Sun, 25 Jan 2015 16:00:33 -0500
+End: Sun, 25 Jan 2015 17:46:33 -0500 
+Tasks: Added messagelog/gitlog
+
 Start: Sat, 24 Jan 2015 23:00:15 -0500 
 End: Sat, 24 Jan 2015 23:27:15 -0500 
 Tasks: Worked on objects/functions and updated log
