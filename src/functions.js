@@ -32,16 +32,16 @@ var barType = typeof bar;
 */
 
 //your code here
-bar = function (doubleArray){
+bar = function(doubleArray) {
     for (var i = 0; i < doubleArray.length; i++) {
-        if(typeof doubleArray[i] == 'number') {
-            doubleArray[i] = 2*doubleArray[i];
+        if (typeof doubleArray[i] == 'number') {
+            doubleArray[i] = 2 * doubleArray[i];
         } else {
             return false;
         }
     }
     return true;
-}
+};
 //end your code
 
 /**
@@ -78,6 +78,18 @@ function GitLog(hash, date, message) {
 
 //your code here
 function parseGit(logArray) {
-    
+    var GitArray = [];
+    var hash, date, message;
+    for (var i = 0; i < logArray.length; i++) {
+        var temp = logArray[i].split('"');
+        temp.pop();
+        message = temp.pop();
+        temp = temp.join('"');
+        temp = temp.split(' ');
+        hash = temp.shift();
+        date = new Date(temp.join(' ').trim());
+        GitArray.push(new GitLog(hash, date, message));
+    }
+    return GitArray;
 }
 //end your code

@@ -41,32 +41,28 @@ function returnObjectLiteral() {
 */
 
 //your code here
-function MessageLog (user) {
-  this.name = user;
+function MessageLog(user) {
+  this.user = user;
+  this.SentMessages = [];
+  this.ReceivedMessages = [];
+  this.logMessage = function(messageText, direction) {
+    if (direction == 0) {
+      this.SentMessages.unshift(messageText);
+    } else if (direction == 1) {
+      this.ReceivedMessages.unshift(messageText);
+    }
+  };
+  this.getSentMessage = function(n) {
+    return this.SentMessages[n];
+  };
+  this.totalSent = function() {
+    return this.SentMessages.length;
+  };
+  this.totalReceived = function() {
+    return this.ReceivedMessages.length;
+  };
 }
 
-function logMessage (messageText, direction) {
-  MessageLog.call(this);
-  if (direction == 0) {
-    return 0;
-  }
-  else if (direction == 1) {
-    return 1; 
-  }
-  return 3;
-}
-
-function getSentMessage(n) {
-  MessageLog.call(this);
-}
-
-function totalSent() {
-  MessageLog.call(this);
-}
-
-function totalReceived() {
-  MessageLog.call(this);
-}
 //end your code
 
 /**
@@ -75,10 +71,9 @@ function totalReceived() {
 * received.
 */
 //your code here
-function lastReceivedMessage () {
-  return null;
-}
-lastReceivedMessage.prototype = new MessageLog;
+MessageLog.prototype.lastReceivedMessage = function() {
+  return this.ReceivedMessages[0];
+};
 //end your code
 
 /**
@@ -88,5 +83,8 @@ lastReceivedMessage.prototype = new MessageLog;
 */
 
 //your code here
-//var myLog = new MessageLog('BlackHatGuy', ['foo', 'bar', 'baz']);
+var myLog = new MessageLog('BlackHatGuy');
+myLog.logMessage('foo', 1);
+myLog.logMessage('bar', 1);
+myLog.logMessage('baz', 1);
 //end your code

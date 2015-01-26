@@ -1,3 +1,7 @@
+Start: Sat, 24 Jan 2015 23:00:15 -0500 
+End: Sat, 24 Jan 2015 23:27:15 -0500 
+Tasks: Worked on objects/functions and updated log
+
 Start: Sat, 24 Jan 2015 22:05:32 -0500
 End: Sat, 24 Jan 2015 22:29:43 -0500 
 Tasks: Updated log/Added useless function/bar
