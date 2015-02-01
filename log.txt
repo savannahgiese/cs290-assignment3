@@ -1,3 +1,15 @@
+Start: Sun, 1 Feb 2015 14:39:25 -0500
+End: Sun, 1 Feb 2015 14:49:25 -0500 
+Tasks: Finished assignment 3
+
+Start: Sat, 31 Jan 2015 12:29:25 -0500
+End: Sat, 31 Jan 2015 16:46:25 -0500 
+Tasks: Added 'Favorite' Button to Gists
+
+Start: Wed, 28 Jan 2015 17:32:43 -0500
+End: Wed, 28 Jan 2015 20:35:43 -0500 
+Tasks: Worked on Part 2 of Assignment
+
 Start: Sun, 25 Jan 2015 16:00:33 -0500
 End: Sun, 25 Jan 2015 17:46:33 -0500 
 Tasks: Added messagelog/gitlog
