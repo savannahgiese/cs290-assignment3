@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Assignment 3</title>
+    <script type="text/javascript" src="Assignment3.js"></script>
+</head>
+<body>
+    <div id="output"></div>
+    <section>
+        <h3>Display Gists from Github</h3>
+
+        <form name="searching" action="javascript:void(0);">
+            <input type="checkbox" class="language" value="Python">Python <br>
+            <input type="checkbox" class="language" value="JSON">JSON <br>
+            <input type="checkbox" class="language" value="JavaScript">JavaScript <br>
+            <input type="checkbox" class="language" value="SQL">SQL <br> 
+
+            <label>Pages of results to display</label>
+            <select id="pageCount">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <button onclick="searchOptions()">Search!</button>
+        </form>
+    </section>
+    <section>
+        <div>
+            <table id="results"></table> 
+        </div>
+    </section>
+</body>
+</html>
