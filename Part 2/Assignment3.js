@@ -1,9 +1,23 @@
 var requests = [];
 var favorites = [];
 var checkedLanguages = [];
+var table;
+var tableFavorites;
+
+function startUp() {
+    table = document.getElementById("results");
+    tableFavorites = document.getElementById("favorites");
+}
+
+function HulkSmash() {
+    while(table.rows.length > 0) { 
+        table.deleteRow(0); 
+    }
+    //console.log("Hulk Smash!");
+}
 
 function searchOptions() {
-
+    checkedLanguages = [];
     var tempLang = document.getElementsByClassName("language");
     var e = document.getElementById("pageCount");
     var pageCount = e.options[e.selectedIndex].value;
@@ -15,6 +29,7 @@ function searchOptions() {
     }
 
     var thisRequest;
+    HulkSmash();
     for (var i = 0; i < pageCount; i++) {
         thisRequest = new XMLHttpRequest();
         requests.push({
@@ -41,7 +56,7 @@ function processAjax() {
         if (requests[k].done == false) {
             if (requests[k].req.readyState === 4) {
                 if (requests[k].req.status === 200) {
-                    console.log("it worked");
+                    //console.log("it worked");
                     gists = JSON.parse(requests[k].req.response);
                     addRows(filterArray(gists));
                     requests[k].done = true;
@@ -62,7 +77,7 @@ function filterArray(gists) {
         files = gists[k].files;
         l = files[Object.keys(files)[0]].language;
         //console.log(l);
-        if (checkedLanguages.indexOf(l) > -1) {
+        if (checkedLanguages.indexOf(l) > -1 || checkedLanguages.length == 0) {
             console.log(l);
             if (favorites.indexOf(gists[k].url) < 0) {
                 newGists.push(gists[k]);
@@ -74,11 +89,14 @@ function filterArray(gists) {
 
 function addRows(gists) {
     console.log(gists);
-    var table = document.getElementById("results");
     var row;
     
     for (var i = 0; i < gists.length; i++) {
         row = table.insertRow();
-        row.innerHTML = "<td><a href=" + gists[i].html_url + ">" + gists[i].id + " - " + gists[i].description + "</a></td><td>"+"<td>";
+        row.innerHTML = "<td><a href=" + gists[i].html_url + ">" + gists[i].id + " - " + gists[i].description + "</a></td><td><button onclick=favorite('" + gists[i].id + "')>Favorite</button></td>";
     }
+}
+
+function favorite(gistId) {
+    
 }
